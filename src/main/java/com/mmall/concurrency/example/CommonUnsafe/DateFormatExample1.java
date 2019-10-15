@@ -1,14 +1,10 @@
 package com.mmall.concurrency.example.CommonUnsafe;
 
-import EDU.oswego.cs.dl.util.concurrent.Semaphore;
 import com.mmall.concurrency.annotations.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 @Slf4j
 @NotThreadSafe
@@ -30,7 +26,7 @@ public class DateFormatExample1 {
         }
     }
 
-    public static void main(String []args) throws InterruptedException {
+    /*public static void main(String []args) throws InterruptedException {
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new java.util.concurrent.Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
@@ -49,7 +45,7 @@ public class DateFormatExample1 {
         countDownLatch.await();
         executorService.shutdown();
 
-    }
+    }*/
 
 
 }
