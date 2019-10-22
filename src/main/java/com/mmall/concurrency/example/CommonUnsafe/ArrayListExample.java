@@ -1,6 +1,5 @@
 package com.mmall.concurrency.example.commonUnsafe;
 
-import EDU.oswego.cs.dl.util.concurrent.Semaphore;
 import com.mmall.concurrency.annotations.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 

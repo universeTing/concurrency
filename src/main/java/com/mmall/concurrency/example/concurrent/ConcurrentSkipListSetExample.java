@@ -27,7 +27,7 @@ public class ConcurrentSkipListSetExample {
 
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
-        final Semaphore semaphore = new Semaphore(threadTotal);
+        final Seamphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
         for (int i = 0; i < clientTotal; i++) {
             final int count = i;
