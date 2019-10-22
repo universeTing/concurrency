@@ -1,14 +1,10 @@
 package com.mmall.concurrency.example.concurrent;
 
-import EDU.oswego.cs.dl.util.concurrent.Semaphore;
 import com.mmall.concurrency.annotations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 @Slf4j
 @ThreadSafe
@@ -22,7 +18,7 @@ public class CopyOnWriteArrayListExample {
 
     private static List<Integer> list = new CopyOnWriteArrayList<>();
 
-    public static void main(String[] args) throws Exception {
+    /*public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
@@ -43,7 +39,7 @@ public class CopyOnWriteArrayListExample {
         executorService.shutdown();
         log.info("size:{}", list.size());
     }
-
+*/
     private static void update(int i) {
         list.add(i);
     }
